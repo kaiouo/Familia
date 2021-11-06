@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asigancion4</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<style>
+
+body{
+    width: 100%;
+    height: 175vh;
+    background-color: rgb(93, 161, 216); 
+}
+
+
+#contain-tree {
+   width: 60%;
+   align-items: center;
+   justify-content: center;
+   margin-top: 6%;
+   margin-right: 6%;
+   margin-left: 25%;
+
+}
+
+#contain-tree>img {
+   width: 80%;
+   border: 2px solid black;
+}
+
+
+.container-fluid{
+    text-align: center;
+    color: white;
+    margin-top: 25px;
+    font-family: sans-serif;
+    font-size: 30px;
+    height: 50px;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+}
+
+.container{
+    margin-top: 30px;
+}
+
+/* Style the tab */
+h3, h4{
+    
+    color: white;
+    margin: 30px;
+}
+
+.tab {
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: #343a40;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  color: white;
+  background-color: #343a40;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+</style>
+<body>
+
+   
+    <div class="container-fluid">Árbol Genealógico</div>
+
+    <div>
+        <div id="contain-tree">
+        <img id="imagen1" src="tree 2.png">
+        </div>
+
+    </div>
+
+
+    
+    <div class="modal fade" id="myModal1" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal 1 content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              
+              <h4 class="modal-title">Foto Familiar con mi madre</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="Foto f1.jpg" width="400" height="236">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+   
+<div class="modal fade" id="myModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal 2 content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <h4 class="modal-title">Foto Familiar con mi padre</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <img src="Foto f2.jpg" width="400" height="236">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+    <div class="container">
+                
+        <h3>Mi Familia</h3>
+        
+
+        <div class="tab">
+        <button class="tablinks" onclick="openRelat(event, 'i')">Yo</button>
+        <button class="tablinks" onclick="openRelat(event, 'bro')">Hermano</button>
+        <button class="tablinks" onclick="openRelat(event, 'dad')">padre</button>
+        <button class="tablinks" onclick="openRelat(event, 'mom')">madre</button>
+        <button class="tablinks" onclick="openRelat(event, 'uncle')">Tio</button>
+        <button class="tablinks" onclick="openRelat(event, 'aunt')">Tia</button>
+        <button class="tablinks" onclick="openRelat(event, 'grandMa')">Abuela</button>
+        <button class="tablinks" onclick="openRelat(event, 'grandPa')">Abuelo</button>
+        </div>
+
+
+
+        <div id="i" class="tabcontent">
+        <h4>Yo</h4>
+        <p>Mi nombre es Katherine Estefany Beltrán López soy estudiante de inglés y de programación, 
+          me gustan los gatos, la tecnología, las series animadas, los juegos y la música</p>
+        </div>
+
+        <div id="bro" class="tabcontent">
+        <h4>Hermano</h4>
+        <p>Mi hermano Cristofer Beltrán tiene 23 años trabaja en seguridad,
+           le gusta salir con sus amigos y comer mucho.</p> 
+        </div>
+
+        <div id="dad" class="tabcontent">
+        <h4>Padre</h4>
+        <p>Mi padre Osmar Beltrán
+          Trabaja como albañil, le gusta salir y comer fuera de casa; 
+          no vive en mi casa, pero suele invitar a mi hermano y a mí a salir</p>
+        </div>
+
+        <div id="mom" class="tabcontent">
+        <h4>madre</h4>
+        <p>Mi madre Mirna López
+          Trabaja como comerciante y es estudiante de informática educativa, 
+          le gusta hacer ejercicio, le gusta la naturaleza.</p>
+        </div>
+
+        <div id="uncle" class="tabcontent">
+        <h4>Tio</h4>
+        <p>Mi tío Rene López
+          Es uno de los 4 hermanos de mi madre, trabaja como panificador,
+           le gusta visitar la casa de mi familia y ver facebook</p> 
+        </div>
+
+        <div id="aunt" class="tabcontent">
+        <h4>Tia</h4>
+        <p>Mi tía Hilda López
+          Es una de los hermanos de mi madre, es ama de casa,
+          le gusta visitar las casas de sus conocidos y los regalos</p>
+        </div>
+        <div id="grandMa" class="tabcontent">
+        <h4>Abuela</h4>
+        <p>Mi abuela Mercedes López
+          Es comerciante, le gustan los animales, ver telenovelas turcas y dormir.</p>
+        </div>
+
+        <div id="grandPa" class="tabcontent">
+        <h4>Abuelo</h4>
+        <p>Mi abuelo Rodolfo Beltrán
+          Era medico, hasta hace unos años cuando fallecio, era fiel creyente de Dios, se caso varias veces. 
+        </p> 
+        </div>
+
+    </div>
+
+    <div class="container">
+       
+        <div class="btn-toolbar" >
+            <button type="button" class="btn btn-dark btn mr-3" data-toggle="modal" data-target="#myModal1">Foto Familiar</button>
+            <button type="button" class="btn btn-dark btn mr-3" data-toggle="modal" data-target="#myModal2">Foto Familiar 2</button>
+          </div>
+    
+    </div>
+
+</body>
+
+<script>
+    function openRelat(evt, relative) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(relative).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+</script>
+
+</html>
